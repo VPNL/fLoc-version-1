@@ -4,7 +4,9 @@ function [w,center,gray] = doScreen
 % Edited by AS 8/2014
 
 % open window and find center
-[w,rect] = Screen('OpenWindow',0);
+Ss = Screen('Screens');
+screenNumber = max(Ss);
+[w,rect] = Screen('OpenWindow',screenNumber);
 center = [rect(3) rect(4)]/2;
 
 % set text properties
