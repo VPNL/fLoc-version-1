@@ -36,7 +36,7 @@ nstim = 144; % number of stimuli per subcategory
 if rem(stimperblock*stimdur,TR)
     TR = stimperblock*stimdur;
 end
-% balance frequency of stimulus repetition or oddbals across image sets
+% balance frequency of stimulus repetition or oddballs across image sets
 repfreq = round(repfreq*norders*nconds/2)/(norders*nconds/2);
 
 %% GENERATE STIMULUS SEQUENCES
