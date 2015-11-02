@@ -1,4 +1,4 @@
-function stimseq = makeorder_fLocs(nruns,task)
+function stimseq = makeorder_fLoc(nruns,task)
 % Generates stimulus sequences, scripts, and parfiles for specified number
 % of functional localizer runs.
 % 
