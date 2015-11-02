@@ -15,7 +15,7 @@ function stimseq = makeorder_fLoc(nruns,task)
 %% EXPERIMENTAL PARAMETERS
 % scanner and task parameters (modifiable)
 TR = 2; % fMRI TR (must be a factor of block duration in secs)
-repfreq = 1/3; % proportion of blocks with repetition
+repfreq = 1/3; % proportion of blocks with task probe
 % stimulus categories (2 per condition)
 cats = {'word' 'number'; ...
     'body' 'limb'; ...
