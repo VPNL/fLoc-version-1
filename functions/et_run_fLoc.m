@@ -132,10 +132,10 @@ end
 % record total time of experiment
 subject.totalTime = GetSecs-startTime;
 theSubject = subject;
-% analyze performance on 2-back task
+% analyze behavioral performance
 theData = [];
 theData = doAnalysis_fLoc(theSubject,data,waitDur,viewTime);
-% display performance on 2-back task
+% display behavioral performance
 hitStr = ['Hits: ' num2str(theData.hits) '/' num2str(theData.nreps) ' (' num2str(theData.propHit*100) '%)'];
 faStr = ['False alarms: ' num2str(theData.falseAlarms)];
 Screen('FillRect',windowPtr,blankColor);
