@@ -2,6 +2,7 @@ function [theSubject theData] = et_run_fLoc(path,subject)
 % Displays images for functional localizer experiment and collects
 % behavioral data for 2-back image repetition detection task.
 % AS 8/2014
+% KJ@UMN 2/2016: Fix cumulative timing bug    
 
 %% CHANGEABLE PARAMETERS
 countDown = 12; % pre-experiment countdown (secs)
@@ -123,7 +124,8 @@ for t = 1:numTrials
     % collect response and measure timing
     trialEnd = GetSecs-startTime;
     subject.timePerTrial(t) = trialEnd;
-    [keys RT] = recordKeys(trialStart,viewTime,k);
+    %[keys RT] = recordKeys(trialStart,viewTime,k);
+    [keys RT] = recordKeys(startTime+(t-1)*viewTime,viewTime,k);
     data.keys{t} = keys;
     data.rt(t) = min(RT);
 end
