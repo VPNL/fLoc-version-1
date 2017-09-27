@@ -1,5 +1,4 @@
 # fLoc-version-1
-Functional Localizer
 
 This repository contains a legacy version of the functional localizer code. 
 
